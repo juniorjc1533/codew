@@ -60,7 +60,7 @@ export default function ContactForm() {
         className="contact__heading"
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp(0)}
       >
-        <p className="contact__eyebrow">// fale comigo</p>
+        <p className="contact__eyebrow"> fale comigo</p>
         <h2 className="contact__title">
           Entre em <span className="contact__title-accent">Contato</span>
         </h2>

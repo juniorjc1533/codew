@@ -42,7 +42,7 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="section-eyebrow">// meu trabalho</p>
+              <p className="section-eyebrow"> meu trabalho</p>
               <h2 className="section-title">
                 Meus <span className="section-title-accent">Projetos</span>
               </h2>

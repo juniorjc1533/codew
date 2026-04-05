@@ -85,7 +85,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.div className="hero__role" initial="hidden" animate="visible" variants={fadeUp(0.35)}>
-            <span className="hero__role-prefix">// </span>
+            <span className="hero__role-prefix"></span>
             <span className="hero__role-text">{role}</span>
             <span className="hero__cursor" aria-hidden="true">|</span>
           </motion.div>

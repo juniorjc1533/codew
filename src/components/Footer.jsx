@@ -3,10 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../styles/Footer.css";
 import Logo from "../assets/LogoBranca.png";
 import {
-  FaWhatsapp, FaLinkedin, FaInstagram,
-  FaEnvelope, FaGithub, FaCheckCircle,
+  FaWhatsapp,  FaInstagram,
+  FaEnvelope,  FaCheckCircle,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 const links = {
   Produto:  ["E-commerce", "Sites institucionais", "Agendamentos", "Aplicativos"],
@@ -76,7 +75,7 @@ export default function Footer() {
                 <ul className="footer__link-list">
                   {items.map((item) => (
                     <li key={item}>
-                      <a href="#" className="footer__link">{item}</a>
+                      <a href="https://codew-alison.vercel.app" className="footer__link">{item}</a>
                     </li>
                   ))}
                 </ul>
@@ -141,7 +140,7 @@ export default function Footer() {
           </p>
           <div className="footer__bottom-links">
             {["Privacidade", "Termos", "Cookies"].map((item) => (
-              <a key={item} href="#" className="footer__bottom-link">{item}</a>
+              <a key={item} href="https://codew-alison.vercel.app" className="footer__bottom-link">{item}</a>
             ))}
           </div>
         </div>
