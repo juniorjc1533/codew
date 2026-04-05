@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/codew/static/css/main.dd9ca8db.css",
+    "main.js": "/codew/static/js/main.7c17be39.js",
+    "static/js/453.5b58587c.chunk.js": "/codew/static/js/453.5b58587c.chunk.js",
+    "static/media/Eu.png": "/codew/static/media/Eu.57ced8dc2b5b33458e3b.png",
+    "static/media/LogoBranca.png": "/codew/static/media/LogoBranca.579b824eb11e5176eb2a.png",
+    "index.html": "/codew/index.html",
+    "main.dd9ca8db.css.map": "/codew/static/css/main.dd9ca8db.css.map",
+    "main.7c17be39.js.map": "/codew/static/js/main.7c17be39.js.map",
+    "453.5b58587c.chunk.js.map": "/codew/static/js/453.5b58587c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd9ca8db.css",
+    "static/js/main.7c17be39.js"
+  ]
+}
