@@ -1,0 +1,425 @@
+/* =====================================================
+   HERO — Portfólio Alison Ryan
+   ===================================================== */
+
+.hero {
+  background-color: var(--preto);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 5% 60px;
+  box-sizing: border-box;
+}
+
+/* ── Grid background ── */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 80, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 80, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Glow orb ── */
+.hero__orb {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(0, 255, 80, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: orbPulse 6s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.1); opacity: 0.7; }
+}
+
+/* ── Content wrapper ── */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ===================================================
+   LEFT
+   =================================================== */
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 540px;
+}
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 255, 80, 0.08);
+  border: 1px solid rgba(0, 255, 80, 0.3);
+  color: var(--verde);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.hero__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--verde);
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* Greeting */
+.hero__greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.hero__greeting-line {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--verde);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Name */
+.hero__name {
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--branco);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.hero__name-accent {
+  color: var(--verde);
+  position: relative;
+  display: inline-block;
+}
+
+.hero__name-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--verde);
+  border-radius: 2px;
+  opacity: 0.4;
+}
+
+/* Role / typewriter */
+.hero__role {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(255, 255, 255, 0.7);
+  min-height: 1.6em;
+  letter-spacing: 0.01em;
+}
+
+.hero__role-prefix {
+  color: var(--verde);
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.hero__role-text {
+  color: var(--branco);
+}
+
+.hero__cursor {
+  color: var(--verde);
+  font-weight: 300;
+  animation: cursorBlink 0.85s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Description */
+.hero__desc {
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* Social icons */
+.hero__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.hero__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+  text-decoration: none;
+}
+
+.hero__icon:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* CTAs */
+.hero__ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero__btn--primary {
+  background: var(--verde);
+  color: var(--preto);
+  border: 2px solid var(--verde);
+}
+
+.hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 255, 80, 0.3);
+}
+
+.hero__btn--ghost {
+  background: transparent;
+  color: var(--branco);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero__btn--ghost:hover {
+  border-color: var(--verde);
+  color: var(--verde);
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   RIGHT — Image
+   =================================================== */
+.hero__right {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero__img-frame {
+  position: relative;
+  width: 380px;
+}
+
+.hero__img-glow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(0, 255, 80, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 -10px 40px rgba(0, 255, 80, 0.25));
+}
+
+.hero__img-border {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(0, 255, 80, 0.15);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Floating tag */
+.hero__tag {
+  position: absolute;
+  bottom: 40px;
+  left: -30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid rgba(0, 255, 80, 0.3);
+  backdrop-filter: blur(10px);
+  color: var(--branco);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 12px;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.hero__tag-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--verde);
+  border-radius: 50%;
+  animation: blink 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* ===================================================
+   SCROLL HINT
+   =================================================== */
+.hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(0, 255, 80, 0.5), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50%       { opacity: 0.3; transform: scaleY(0.6); }
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 900px) {
+  .hero__content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero__left {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero__greeting {
+    justify-content: center;
+  }
+
+  .hero__desc {
+    text-align: center;
+  }
+
+  .hero__img-frame {
+    width: 260px;
+  }
+
+  .hero__tag {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+  }
+
+  .hero__ctas {
+    justify-content: center;
+  }
+
+  .hero__socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 6% 80px;
+  }
+
+  .hero__name {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .hero__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #pular_linha{
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "titulo": "Fanex",
+        "imagem": "/assets/PaginaFanex.png",
+        "categoria": "Institucional",
+        "tecnologias":["WordPress", "JavaScript", "CSS"],
+        "descricao": "Site institucional para mostrar cursos da instituição com intuito de buscar LEADS e para melhorar a forma de mostrar os cursos para os clientes.",
+        "link": "https://fanex.com.br"
+    },
+    {
+        "id": 2,
+        "titulo": "Fox Açaí",
+        "imagem": "/assets/PaginaFoxAcai.png",
+        "categoria": "E-commerce",
+        "tecnologias":[ "HTML", "JavaScript", "CSS"],
+        "descricao": "Site de ecommerce feito com intuito de praticidade na hora do atendimento ao cliente, o qual o cliente faz o pedido pelo site e chega no whatsapp da acaitera com todas informações de produto e entrega",
+        "link": "https://foxacai.vercel.app"
+    },
+    {
+        "id": 3,
+        "titulo": "FastAgenda",
+        "imagem": "/assets/PaginaFastAgenda.png",
+        "categoria": "Institucional",
+        "tecnologias":[ "React", "JavaScript", "NodeJS" , "CSS"],
+        "descricao": "Site institucional para realizar agendamentos de serviços internos do IFRN - Campus macau com intuito de facilitar o serviço dos alunos com rapidez e facilidade nos serviços.",
+        "link": "https://fastagenda.vercel.app"
+    }
+]
